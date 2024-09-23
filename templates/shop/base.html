@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} MAST-online Shop {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'images/new.png' %}"></a>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <h1>MAST-online Shop</h1>
+                </div>
+                <div class="col-1">
+                    <nav>
+                        <ul id="MenuItems">
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'cart' %}">Cart</a></li>
+                            <li><a href="{% url 'about_us' %}">About us</a></li>
+                            <li><a href="{% url 'category_list' %}">Categories</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                            {% endif %} 
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 MAST-online Shop</p>
+    </footer>
+</body>
+</html>

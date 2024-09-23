@@ -1,0 +1,31 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="page-btn">
+    <a href="{% url 'home' %}"><span>&#8592; Prev</span></a>
+</div>
+    <!-- <h2>About us</h2> -->
+    <div class="about_us">
+        <h2>Welcome to MAST,</h2>
+        <br>
+        <h3>your premier destination for online shopping excellence!</h3>
+        <br>
+        <p>At MAST, we're more than just an online store; we're your dedicated partner in discovering the best products, trends, and deals from around the world.</p>
+            <br>
+        <p>Our mission is to simplify your shopping experience by offering a curated selection of high-quality items across a diverse range of categories, from fashion and electronics to home essentials and unique gifts.</p>
+        <br>
+        <p>Founded on the principles of convenience, quality, and customer satisfaction, MAST is committed to providing an effortless and enjoyable shopping journey.</p>
+        <br>
+        <p>Our team of passionate professionals works tirelessly to ensure that every product we offer meets our rigorous standards, delivering both exceptional value and unparalleled performance.</p>
+            <br>
+        <p>What sets us apart is our focus on personalization and innovation. We use advanced technology to tailor your shopping experience, offering personalized recommendations and a seamless interface that makes finding exactly what you need easier than ever.</p>
+            <br>
+        <p>Thank you for choosing MAST as your go-to online shopping destination. We’re excited to be part of your shopping adventures and look forward to serving you with the best products and service.</p>
+            <br>
+        <a href="{% url 'category_list' %}"><span>Happy shopping!</span></a><br>
+            <br>
+        <p>The MAST Team</p>
+    </div>
+{% endblock %}

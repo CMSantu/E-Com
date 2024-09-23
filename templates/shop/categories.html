@@ -1,0 +1,16 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Category{% endblock %}
+
+{% block content %}
+    <div class="page-btn">
+        <a href="{% url 'home' %}"><span>&#8592; Prev</span></a>
+    </div>
+    <div class="cat-btn">
+        {% for category in categories %}
+            <br><a href="{% url 'category_products' category.id %}"><span>{{ category.name }}</span></a><br>
+        {% endfor %}
+        <p></p>
+    </div>
+
+{% endblock %}

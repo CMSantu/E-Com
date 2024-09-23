@@ -1,0 +1,23 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<div class="page-btn">
+    <a href="{% url 'home' %}"><span>&#8592; Prev</span></a>
+</div>
+    <div class="prod_det">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        <div class="det">
+            <h3>{{ product.name }}</h3>
+            <p>Price: Rs.{{ product.price }}</p>
+            <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
+        </div>
+    </div>
+{% endblock %}
+
+
+<!-- <h2>{{ product.name }}</h2>
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        <p>Rs.{{ product.price }}</p>
+        <a href="{% url 'add_to_cart' product.id %}">Add to Cart</a> -->

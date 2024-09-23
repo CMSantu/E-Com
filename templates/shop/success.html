@@ -1,0 +1,12 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Order Success{% endblock %}
+
+{% block content %}
+    <div class="success">
+        <p>Order successfull</p>
+        <form action="{% url 'Clearcart' %}" method="get">
+            <button type="submit" >Continue shopping</button>
+        </form>
+    </div>
+{% endblock %}

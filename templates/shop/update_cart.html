@@ -1,0 +1,15 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Update Cart{% endblock %}
+
+{% block content %}
+    <!-- <h2>Login</h2> -->
+    <h1>Update Cart</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+        <li><a href="{% url 'home' %}">Continue shopping</a></li>
+    </form>
+
+{% endblock %}
